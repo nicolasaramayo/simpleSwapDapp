@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { WalletProvider } from './context/WalletContext';
+import SwapInterface from './components/SwapInterface';
+import Header from './components/Header';
+import PoolInfo from './components/PoolInfo';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WalletProvider>
+      <div className="App">
+        <Header />
+        <main className="main-content">
+          <div className="container">
+            <div className="dapp-layout">
+              <div className="swap-section">
+                <SwapInterface />
+              </div>
+              
+            </div>
+          </div>
+        </main>
+      </div>
+    </WalletProvider>
   );
 }
 
