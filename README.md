@@ -2,7 +2,7 @@
 
 A simple decentralized exchange (DEX) built with Solidity smart contracts and React frontend.
 
-## 🌐 Live Demo
+## Live Demo
 
 **🚀 Deployed on Vercel:** [https://simple-swap-dapp-16ki54h3q-nicolasaramayos-projects.vercel.app/](https://simple-swap-dapp-16ki54h3q-nicolasaramayos-projects.vercel.app/)
 
@@ -109,15 +109,12 @@ npx hardhat run scripts/deploy.js --network localhost
 
 
 
-## 🌐 Frontend
+##  Frontend
 
 ### Start Development Server
 ```bash
 npm run frontend:start
-```
-o 
-
-```bash
+# or
 cd frontend
 npm start
 ```
@@ -129,12 +126,7 @@ npm start
 - **Token Swapping**: Swap tokens using AMM formula
 - **Price Calculation**: Get token prices and amounts
 
-
-### SimpleToken
-- **ERC-20 Token**: Simple token for testing
-- **Minting**: Mint tokens for testing purposes
-
-## 🔗 Deployed Contracts
+##  Deployed Contracts
 
 ### Sepolia Testnet
 - SimpleSwap: [Contract Address]
