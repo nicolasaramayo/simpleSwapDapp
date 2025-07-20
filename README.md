@@ -2,6 +2,14 @@
 
 A simple decentralized exchange (DEX) built with Solidity smart contracts and React frontend.
 
+## 🌐 Live Demo
+
+**🚀 Deployed on Vercel:** [https://simple-swap-dapp-16ki54h3q-nicolasaramayos-projects.vercel.app/](https://simple-swap-dapp-16ki54h3q-nicolasaramayos-projects.vercel.app/)
+
+## Frontend Preview
+
+![SimpleSwap Frontend](image_frontend.png)
+
 ## Project Structure
 
 ```
@@ -23,13 +31,7 @@ simpleSwapDapp/
 └── package.json       # Project dependencies
 ```
 
-## Images
-
-image_frontend.png
-
-
-
-## Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -89,8 +91,25 @@ npx hardhat coverage
 npm run frontend:test
 ```
 
+## 🔧 Smart Contracts
 
-## Frontend
+### Compile Contracts
+```bash
+npm run compile
+# or
+npx hardhat compile
+```
+
+### Deploy to Local Network
+```bash
+npm run deploy:localhost
+# or
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+
+
+## 🌐 Frontend
 
 ### Start Development Server
 ```bash
@@ -115,16 +134,18 @@ npm start
 - **ERC-20 Token**: Simple token for testing
 - **Minting**: Mint tokens for testing purposes
 
-## Deployed Contracts
+## 🔗 Deployed Contracts
 
 ### Sepolia Testnet
 - SimpleSwap: [Contract Address]
 - SimpleToken A: [Contract Address]
 - SimpleToken B: [Contract Address]
 
-## ⚠️ Security Notes
+## Security Notes
 
 - **NEVER commit your `.env` file** - it contains sensitive information
+- **Keep your private keys secure** - never share them
+- **Use testnet for development** - don't use mainnet for testing
 
 ## License
 
