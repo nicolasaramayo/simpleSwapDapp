@@ -10,12 +10,12 @@
     "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
     "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
     "node": "hardhat node",
-    "frontend:start": "cd frontend-app && npm start",
-    "frontend:build": "cd frontend-app && npm run build",
-    "frontend:test": "cd frontend-app && npm test",
+    "frontend:start": "cd frontend && npm start",
+    "frontend:build": "cd frontend && npm run build",
+    "frontend:test": "cd frontend && npm test",
     "dev": "concurrently \"npm run node\" \"npm run frontend:start\"",
     "install:all": "npm install",
-    "postinstall": "cd frontend-app && npm install --production=false"
+    "postinstall": "cd frontend && npm install --production=false"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",

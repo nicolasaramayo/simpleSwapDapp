@@ -8,14 +8,13 @@ A complete decentralized exchange (DEX) built with Solidity smart contracts and 
 simpleSwapDapp/
 ├── contracts/          # Smart contracts (Solidity)
 │   ├── SimpleSwap.sol  # Main DEX contract
-│   ├── TestTokenA.sol  # Test token A
-│   └── TestTokenB.sol  # Test token B
+│   └── SimpleToken.sol # Simple token for testing
 ├── test/              # Solidity tests
 │   └── SimpleSwap.test.js
 ├── scripts/           # Deployment scripts
 │   ├── deploy.js
 │   └── initialize-sepolia.js
-├── frontend-app/      # React frontend
+├── frontend/          # React frontend
 │   ├── src/
 │   ├── public/
 │   └── package.json
@@ -40,13 +39,8 @@ cd simpleSwapDapp
 
 2. **Install dependencies**
 ```bash
-# Install Hardhat and Solidity dependencies
+# Install all dependencies (consolidated)
 npm install
-
-# Install frontend dependencies
-cd frontend-app
-npm install
-cd ..
 ```
 
 3. **Set up environment variables**
@@ -81,9 +75,8 @@ npx hardhat coverage
 ```
 
 **Current Coverage:**
-- **SimpleSwap.sol**: 96.81% statements, 100% functions
-- **TestTokenA.sol**: 100% coverage
-- **TestTokenB.sol**: 100% coverage
+- **SimpleSwap.sol**: 92.55% statements, 90% lines
+- **SimpleToken.sol**: 100% coverage
 
 ### Run Frontend Tests
 ```bash
@@ -133,17 +126,16 @@ npm run frontend:build
 - **Price Calculation**: Get token prices and amounts
 - **Reserve Management**: Track token reserves
 
-### Test Tokens
-- **TestTokenA**: ERC-20 token for testing
-- **TestTokenB**: ERC-20 token for testing
+### SimpleToken
+- **ERC-20 Token**: Simple token for testing
 - **Minting**: Mint tokens for testing purposes
 
 ## 🔗 Deployed Contracts
 
 ### Sepolia Testnet
 - SimpleSwap: [Contract Address]
-- TestTokenA: [Contract Address]
-- TestTokenB: [Contract Address]
+- SimpleToken A: [Contract Address]
+- SimpleToken B: [Contract Address]
 
 ## ⚠️ Security Notes
 
