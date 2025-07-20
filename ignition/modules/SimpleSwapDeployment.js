@@ -1,9 +1,9 @@
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
 module.exports = buildModule("SimpleSwapDeployment", (m) => {
-  // Deploy Test Tokens
-  const tokenA = m.contract("TestTokenA");
-  const tokenB = m.contract("TestTokenB");
+  // Deploy Simple Tokens
+  const tokenA = m.contract("SimpleToken", ["Token A", "TKA"]);
+  const tokenB = m.contract("SimpleToken", ["Token B", "TKB"]);
   
   // Deploy SimpleSwap
   const simpleSwap = m.contract("SimpleSwap");
