@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# SimpleSwap DApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A complete decentralized exchange (DEX) built with Solidity smart contracts and React frontend.
 
-## Available Scripts
+## 📁 Project Structure
 
-In the project directory, you can run:
+```
+simpleSwapDapp/
+├── contracts/          # Smart contracts (Solidity)
+│   ├── SimpleSwap.sol  # Main DEX contract
+│   ├── TestTokenA.sol  # Test token A
+│   └── TestTokenB.sol  # Test token B
+├── test/              # Solidity tests
+│   └── SimpleSwap.test.js
+├── scripts/           # Deployment scripts
+│   ├── deploy.js
+│   └── initialize-sepolia.js
+├── frontend-app/      # React frontend
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── hardhat.config.js  # Hardhat configuration
+├── .env.example       # Environment variables template
+└── package.json       # Project dependencies
+```
 
-### `npm start`
+## 🚀 Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+1. **Clone the repository**
+```bash
+git clone https://github.com/nicolasaramayo/simpleSwapDapp.git
+cd simpleSwapDapp
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**
+```bash
+# Install Hardhat and Solidity dependencies
+npm install
 
-### `npm run build`
+# Install frontend dependencies
+cd frontend-app
+npm install
+cd ..
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Set up environment variables**
+```bash
+# Copy the example environment file
+cp .env.example .env
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Edit .env with your API keys and private key
+# NEVER commit your .env file to version control!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Environment Variables Required:
+- `ALCHEMY_API_KEY`: Your Alchemy API key for Sepolia testnet
+- `SEPOLIA_PRIVATE_KEY`: Your wallet private key (keep this secret!)
+- `ETHERSCAN_API_KEY`: Your Etherscan API key for contract verification
+- `REPORT_GAS`: Set to `true` to enable gas reporting
 
-### `npm run eject`
+## 🧪 Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Run Solidity Tests
+```bash
+npm test
+# or
+npx hardhat test
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Run Test Coverage
+```bash
+npm run coverage
+# or
+npx hardhat coverage
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Current Coverage:**
+- **SimpleSwap.sol**: 96.81% statements, 100% functions
+- **TestTokenA.sol**: 100% coverage
+- **TestTokenB.sol**: 100% coverage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Run Frontend Tests
+```bash
+npm run frontend:test
+```
 
-## Learn More
+## 🔧 Smart Contracts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Compile Contracts
+```bash
+npm run compile
+# or
+npx hardhat compile
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Deploy to Local Network
+```bash
+npm run deploy:localhost
+# or
+npx hardhat run scripts/deploy.js --network localhost
+```
 
-### Code Splitting
+### Deploy to Sepolia Testnet
+```bash
+npm run deploy:sepolia
+# or
+npx hardhat run scripts/deploy.js --network sepolia
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🌐 Frontend
 
-### Analyzing the Bundle Size
+### Start Development Server
+```bash
+npm run frontend:start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Build for Production
+```bash
+npm run frontend:build
+```
 
-### Making a Progressive Web App
+## 📊 Contract Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### SimpleSwap Contract
+- **Liquidity Management**: Add and remove liquidity
+- **Token Swapping**: Swap tokens using AMM formula
+- **Price Calculation**: Get token prices and amounts
+- **Reserve Management**: Track token reserves
 
-### Advanced Configuration
+### Test Tokens
+- **TestTokenA**: ERC-20 token for testing
+- **TestTokenB**: ERC-20 token for testing
+- **Minting**: Mint tokens for testing purposes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔗 Deployed Contracts
 
-### Deployment
+### Sepolia Testnet
+- SimpleSwap: [Contract Address]
+- TestTokenA: [Contract Address]
+- TestTokenB: [Contract Address]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## ⚠️ Security Notes
 
-### `npm run build` fails to minify
+- **NEVER commit your `.env` file** - it contains sensitive information
+- **Keep your private keys secure** - never share them
+- **Use testnet for development** - don't use mainnet for testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+
+MIT License
+
+## 👨‍💻 Author
+
+Nicolas Aramayo
