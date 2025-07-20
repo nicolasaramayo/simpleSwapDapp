@@ -126,12 +126,12 @@ npm start
 - **Token Swapping**: Swap tokens using AMM formula
 - **Price Calculation**: Get token prices and amounts
 
-##  Deployed Contracts
+## 🔗 Deployed Contracts
 
 ### Sepolia Testnet
-- SimpleSwap: [Contract Address]
-- SimpleToken A: [Contract Address]
-- SimpleToken B: [Contract Address]
+- **SimpleSwap**: [0x2843159d568Fa5e059Efd49f22e5A26542bfE392](https://sepolia.etherscan.io/address/0x2843159d568Fa5e059Efd49f22e5A26542bfE392)
+- **TestTokenA**: [0x2dD35434773eB36883408EdDEfe1e5D8B3DC54FF](https://sepolia.etherscan.io/address/0x2dD35434773eB36883408EdDEfe1e5D8B3DC54FF)
+- **TestTokenB**: [0x22A0aC9E38ce8843961A849C473279EC3c4AA332](https://sepolia.etherscan.io/address/0x22A0aC9E38ce8843961A849C473279EC3c4AA332)
 
 ## Security Notes
 
