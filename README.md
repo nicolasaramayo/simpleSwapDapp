@@ -1,8 +1,8 @@
 # SimpleSwap DApp
 
-A complete decentralized exchange (DEX) built with Solidity smart contracts and React frontend.
+A simple decentralized exchange (DEX) built with Solidity smart contracts and React frontend.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 simpleSwapDapp/
@@ -23,7 +23,13 @@ simpleSwapDapp/
 └── package.json       # Project dependencies
 ```
 
-## 🚀 Quick Start
+## Images
+
+image_frontend.png
+
+
+
+## Quick Start
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -56,9 +62,9 @@ cp .env.example .env
 - `ALCHEMY_API_KEY`: Your Alchemy API key for Sepolia testnet
 - `SEPOLIA_PRIVATE_KEY`: Your wallet private key (keep this secret!)
 - `ETHERSCAN_API_KEY`: Your Etherscan API key for contract verification
-- `REPORT_GAS`: Set to `true` to enable gas reporting
 
-## 🧪 Testing
+
+## Testing
 
 ### Run Solidity Tests
 ```bash
@@ -76,61 +82,40 @@ npx hardhat coverage
 
 **Current Coverage:**
 - **SimpleSwap.sol**: 92.55% statements, 90% lines
-- **SimpleToken.sol**: 100% coverage
+- **SimpleToken.sol**: AVISO: ESTE ES UN MOCK Y solo para uso del SimpleSwap.sol pase los test coverage.
 
 ### Run Frontend Tests
 ```bash
 npm run frontend:test
 ```
 
-## 🔧 Smart Contracts
 
-### Compile Contracts
-```bash
-npm run compile
-# or
-npx hardhat compile
-```
-
-### Deploy to Local Network
-```bash
-npm run deploy:localhost
-# or
-npx hardhat run scripts/deploy.js --network localhost
-```
-
-### Deploy to Sepolia Testnet
-```bash
-npm run deploy:sepolia
-# or
-npx hardhat run scripts/deploy.js --network sepolia
-```
-
-## 🌐 Frontend
+## Frontend
 
 ### Start Development Server
 ```bash
 npm run frontend:start
 ```
+o 
 
-### Build for Production
 ```bash
-npm run frontend:build
+cd frontend
+npm start
 ```
 
-## 📊 Contract Features
+## Contract Features
 
 ### SimpleSwap Contract
-- **Liquidity Management**: Add and remove liquidity
+
 - **Token Swapping**: Swap tokens using AMM formula
 - **Price Calculation**: Get token prices and amounts
-- **Reserve Management**: Track token reserves
+
 
 ### SimpleToken
 - **ERC-20 Token**: Simple token for testing
 - **Minting**: Mint tokens for testing purposes
 
-## 🔗 Deployed Contracts
+## Deployed Contracts
 
 ### Sepolia Testnet
 - SimpleSwap: [Contract Address]
@@ -140,13 +125,11 @@ npm run frontend:build
 ## ⚠️ Security Notes
 
 - **NEVER commit your `.env` file** - it contains sensitive information
-- **Keep your private keys secure** - never share them
-- **Use testnet for development** - don't use mainnet for testing
 
-## 📝 License
+## License
 
 MIT License
 
-## 👨‍💻 Author
+## Author
 
-Nicolas Aramayo
+Nicolas Fabian Aramayo
