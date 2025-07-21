@@ -16,7 +16,9 @@ function App() {
               <div className="swap-section">
                 <SwapInterface />
               </div>
-              
+              <div className="pool-info-section">
+                <PoolInfo />
+              </div>
             </div>
           </div>
         </main>
